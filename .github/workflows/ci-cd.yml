@@ -262,7 +262,7 @@ jobs:
       - name: Checkout GitOps repository
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository_owner }}/employee-api-gitops
+          repository: ${{ github.repository_owner }}/api-gitops
           token: ${{ secrets.GITOPS_TOKEN }}
           path: gitops
 
