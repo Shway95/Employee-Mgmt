@@ -156,7 +156,6 @@ class EmployeeServiceTest {
     @DisplayName("Should update employee successfully")
     void updateEmployee_Success() {
         when(employeeRepository.findById(1L)).thenReturn(Optional.of(employee));
-        when(employeeRepository.existsByEmail(anyString())).thenReturn(false);
         when(departmentRepository.findById(1L)).thenReturn(Optional.of(department));
         when(employeeRepository.save(any(Employee.class))).thenReturn(employee);
         when(employeeMapper.toResponse(any(Employee.class))).thenReturn(employeeResponse);
